@@ -30,11 +30,15 @@ const formEl = document.querySelector(".form");
 const inputsValue = [...formEl.querySelectorAll("input")];
 
 function checkInputValue(value, key, num, error) {
+  const children=[...messegeError[key].parentElement.children];
   if (value > num) {
     messegeError[key].textContent = error;
-    messegeError[key].classList.add("error");
+    children.map(child=>child.classList.add("error"))
+
   } else {
-    messegeError[key].classList.remove("error");}
+    children.map(child=>child.classList.remove("error"))
+
+  }
 }
  
 function returnNumberInInput(el) {
@@ -67,9 +71,9 @@ inputsValue.map((input) => {
          
         if (emptyInputId) {
           emptyInputId.forEach((id) => {
-            const showErrorMessage=document.querySelector(`[data-order="${id}"]`)
-            showErrorMessage.classList.add("error");
-            showErrorMessage.textContent = mapError.get("empty");
+            const children=[...document.querySelector(`[data-order="${id}"]`).parentElement.children]
+            children.map(child=>child.classList.add("error"))
+            document.querySelector(`[data-order="${id}"]`).textContent = mapError.get("empty");
           });
         }
         if (!emptyInputId.length) {

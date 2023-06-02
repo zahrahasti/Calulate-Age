@@ -11,5 +11,13 @@
   "license": "ISC",
   "devDependencies": {
     "sass": "^1.62.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zahrahasti/Calulate-Age.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zahrahasti/Calulate-Age/issues"
+  },
+  "homepage": "https://github.com/zahrahasti/Calulate-Age#readme"
 }

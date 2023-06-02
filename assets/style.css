@@ -23,18 +23,23 @@ body {
   padding: 3rem;
   border-bottom-right-radius: 5rem; }
   .container--claculator__inputs {
+    border: none;
     border-bottom: 1px solid #dbdbdb;
     display: grid;
-    padding-bottom: 1.5rem;
-    grid-template-columns: repeat(4, 1fr);
+    padding-bottom: 1rem;
+    grid-template-columns: repeat(3, 1fr) 0.5fr;
     align-items: flex-start;
     gap: 2rem;
+    outline: none;
     position: relative; }
     .container--claculator__inputs label {
-      font-size: 1rem;
+      font-size: 10px;
+      font-weight: 700;
       color: #716f6f;
       display: inline-block;
       margin-bottom: .6rem; }
+      .container--claculator__inputs label.error {
+        color: #ff5757; }
     .container--claculator__inputs input {
       width: 95%;
       outline: none;
@@ -47,18 +52,19 @@ body {
       display: block; }
       .container--claculator__inputs input:active {
         border: 1px solid #854dff; }
-      .container--claculator__inputs input:valid {
-        border: 1px solid #854dff; }
       .container--claculator__inputs input.error {
         border: 1px solid #ff5757; }
+      .container--claculator__inputs input:not(:focus):not(:placeholder-shown):invalid ~ .error-messege {
+        display: block; }
     .container--claculator__inputs p {
       color: #ff5757;
-      font-size: 1.3rem;
-      margin: .8rem 0 2rem;
+      font-size: 1rem;
+      height: 20px;
+      margin: .5rem 0;
       font-style: italic;
-      display: none; }
+      opacity: 0; }
     .container--claculator__inputs p.error {
-      display: block; }
+      opacity: 1; }
     .container--claculator__inputs .submit {
       outline: none;
       border: none;
@@ -66,15 +72,19 @@ body {
       padding: 1rem;
       border-radius: 50%;
       width: 5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       height: 5rem;
-      display: block;
       position: absolute;
       right: 0;
       bottom: -2rem; }
-  .container--claculator .show--age {
+  .container--claculator h1 {
     margin: 3rem 0 1rem;
-    font-size: 3rem; }
-    .container--claculator .show--age .blanck {
+    font-size: 4rem;
+    font-style: italic;
+    font-weight: 900; }
+    .container--claculator h1 span {
       color: #854dff; }
 
 @media (max-width: 1200px) {
@@ -85,12 +95,16 @@ body {
   html {
     font-size: 60%; }
   .container--claculator {
-    width: 60%; } }
+    width: 65%; } }
 
 @media (max-width: 560px) {
   html {
-    font-size: 45%; }
+    font-size: 50%; }
   #number-input {
     font-size: 1.3rem; }
+  svg {
+    width: 2rem;
+    height: 2rem; }
   .container--claculator {
-    width: 80%; } }
+    width: 80%;
+    height: 60%; } }

@@ -119,3 +119,12 @@ Use this section to outline areas that you want to continue focusing on in futur
 This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
 
 **Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+
+
+users need to run npm install to install the required dependencies and then run npm run build-css to compile the Sass code.
+
+npm install sass --save-dev
+
+then 
+
+npm run build-css

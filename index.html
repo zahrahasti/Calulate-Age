@@ -11,37 +11,13 @@
   <title>Frontend Mentor | Age calculator app</title>
   <link rel="stylesheet" href="./assets/style.css">
   <script src="./assets/main.js" defer></script>
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
 </head>
 
 <body>
-  <!-- 
-  Day
-  DD
-
-  Month
-  MM
-
-  Year
-  YYYY
-
-  -- years
-  -- months
-  -- days -->
 
   <section class="container--claculator">
     <form class="form">
-      <div class="container--claculator__inputs">
+      <fieldset class="container--claculator__inputs">
         <div class="container--input">
           <label>DAY</label>
           <input 
@@ -49,7 +25,7 @@
           placeholder="DD" 
           id="day" 
           name="day" 
-          pattern="[0-9]+" 
+          pattern="^[۰-۹0-9]+$"
           maxlength="2" 
           data-id="1"
          
@@ -63,11 +39,10 @@
           placeholder="MM" 
           id="month" 
           name="month" 
-          pattern="[0-9]+"
+          pattern="^[۰-۹0-9]+$"
           title="enter 2 digit"
           data-id="2"
           maxlength="2"
-          minlength="2"
            >
           <p class="error-messege"  data-order="2"></p>
         </div>
@@ -78,8 +53,9 @@
           placeholder="YYYY" 
           id="year" 
           name="year" 
-          pattern="[0-9]+" 
-          maxlength="4" 
+          pattern="^[۰-۹0-9]+$"
+          maxlength="4"
+          minlength="4"
           title="enter 4 digit"
           data-id="3"
           data-order="year"
@@ -96,13 +72,14 @@
               </g>
             </svg>
            </button>
+      </fieldset>
+
+      <div class="show--age">
+        <h1><span class="text-year">--</span>years</h1>
+        <h1><span class="text-month">--</span>months</h1>
+        <h1><span class="text-day">--</span>days</h1>
       </div>
     </form>
-    <div class="show--age">
-      <h1><span class="blanck text-age text-year">--</span>years</h1>
-      <h1><span class="blanck text-age text-month">--</span>months</h1>
-      <h1><span class="blanck text-age text-day">--</span>days</h1>
-    </div>
   </section>
 
 
