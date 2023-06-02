@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&display=swap");
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #f0f0f0;
+  font-size: 1.5rem;
+  font-family: 'Poppins', sans-serif; }
+
+.container--claculator {
+  width: 45%;
+  background: white;
+  border-radius: 1rem;
+  padding: 3rem;
+  border-bottom-right-radius: 5rem; }
+  .container--claculator__inputs {
+    border-bottom: 1px solid #dbdbdb;
+    display: grid;
+    padding-bottom: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: flex-start;
+    gap: 2rem;
+    position: relative; }
+    .container--claculator__inputs label {
+      font-size: 1rem;
+      color: #716f6f;
+      display: inline-block;
+      margin-bottom: .6rem; }
+    .container--claculator__inputs input {
+      width: 95%;
+      outline: none;
+      border: 1px solid #dbdbdb;
+      padding: .5rem;
+      border-radius: .5rem;
+      font-weight: 700;
+      font-size: 2rem;
+      height: 5rem;
+      display: block; }
+      .container--claculator__inputs input:active {
+        border: 1px solid #854dff; }
+      .container--claculator__inputs input:valid {
+        border: 1px solid #854dff; }
+      .container--claculator__inputs input.error {
+        border: 1px solid #ff5757; }
+    .container--claculator__inputs p {
+      color: #ff5757;
+      font-size: 1.3rem;
+      margin: .8rem 0 2rem;
+      font-style: italic;
+      display: none; }
+    .container--claculator__inputs p.error {
+      display: block; }
+    .container--claculator__inputs .submit {
+      outline: none;
+      border: none;
+      background: #854dff;
+      padding: 1rem;
+      border-radius: 50%;
+      width: 5rem;
+      height: 5rem;
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: -2rem; }
+  .container--claculator .show--age {
+    margin: 3rem 0 1rem;
+    font-size: 3rem; }
+    .container--claculator .show--age .blanck {
+      color: #854dff; }
+
+@media (max-width: 1200px) {
+  .container--claculator {
+    width: 55%; } }
+
+@media (max-width: 900px) {
+  html {
+    font-size: 60%; }
+  .container--claculator {
+    width: 60%; } }
+
+@media (max-width: 560px) {
+  html {
+    font-size: 45%; }
+  #number-input {
+    font-size: 1.3rem; }
+  .container--claculator {
+    width: 80%; } }
