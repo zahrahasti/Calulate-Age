@@ -1,6 +1,8 @@
 import { addMonths, addYears, differenceInDays, differenceInMonths, differenceInYears  } from 'date-fns';
 import MonthRule from './modules/monthRules';
 import { DayRules } from './modules/dayRules';
+import DateType from './modules/DateType';
+import { YearRules } from './modules/yearRules';
 const validForm=<HTMLFormElement>document.querySelector(".form");
 const yearDisplay = <HTMLElement>document.querySelector('.text-year');
 const dayDisplay = <HTMLElement> document.querySelector('.text-day');
@@ -11,8 +13,7 @@ const yearInput=<HTMLInputElement>document.querySelector("[data-year-value]")
 const monthInput=<HTMLInputElement>document.querySelector("[data-month-value]")
 const dayInput=<HTMLInputElement>document.querySelector("[data-day-value]")
 
-import DateType from './modules/DateType';
-import { YearRules } from './modules/yearRules';
+
  class DateDifference {
 	private start: Date;
 	private end: Date;
