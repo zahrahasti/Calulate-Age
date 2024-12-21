@@ -1,92 +1,71 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="fglkl" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./src/assets/app.css" />
+		<title>Vite + TS</title>
+	</head>
+	<body>
+		<section class="container--claculator">
+			<form class="form">
+				<fieldset class="container--claculator__inputs">
+					<div class="container--input">
+						<label>DAY</label>
+						<input type="text" placeholder="DD" id="day" name="day" pattern="^[۰-۹0-9]+$" maxlength="2" data-day-value />
+						<p data-day-error></p>
+					</div>
+					<div class="container--input">
+						<label>MONTH</label>
+						<input
+							type="text"
+							placeholder="MM"
+							id="month"
+							name="month"
+							pattern="^[۰-۹0-9]+$"
+							title="enter 2 digit"
+							data-id="2"
+							maxlength="2"
+							data-month-value
+						/>
+						<p data-month-error></p>
+					</div>
+					<div class="container--input">
+						<label>YEAR</label>
+						<input
+							type="text"
+							placeholder="YYYY"
+							id="year"
+							name="year"
+							pattern="^[۰-۹0-9]+$"
+							maxlength="4"
+							minlength="4"
+							title="enter 4 digit"
+							data-id="3"
+							data-year-value
+						/>
+						<p data-year-error></p>
+					</div>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
+					<!-- <input type="submit" class="submit"> -->
+					<button type="submit" class="submit">
+						<svg xmlns="http://www.w3.org/2000/svg" width="30" height="27" viewBox="0 0 46 44">
+							<g fill="none" stroke="#FFF" stroke-width="2">
+								<path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44" />
+							</g>
+						</svg>
+					</button>
+				</fieldset>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-
-  <title>Frontend Mentor | Age calculator app</title>
-  <link rel="stylesheet" href="./assets/style.css">
-  <script src="./assets/main.js" defer></script>
-</head>
-
-<body>
-
-  <section class="container--claculator">
-    <form class="form">
-      <fieldset class="container--claculator__inputs">
-        <div class="container--input">
-          <label>DAY</label>
-          <input 
-          type="text" 
-          placeholder="DD" 
-          id="day" 
-          name="day" 
-          pattern="^[۰-۹0-9]+$"
-          maxlength="2" 
-          data-id="1"
-         
-          >
-          <p class="error-messege"  data-order="1"></p>
-        </div>
-        <div class="container--input">
-          <label>MONTH</label>
-          <input 
-          type="text" 
-          placeholder="MM" 
-          id="month" 
-          name="month" 
-          pattern="^[۰-۹0-9]+$"
-          title="enter 2 digit"
-          data-id="2"
-          maxlength="2"
-           >
-          <p class="error-messege"  data-order="2"></p>
-        </div>
-        <div class="container--input">
-          <label>YEAR</label>
-          <input 
-          type="text" 
-          placeholder="YYYY" 
-          id="year" 
-          name="year" 
-          pattern="^[۰-۹0-9]+$"
-          maxlength="4"
-          minlength="4"
-          title="enter 4 digit"
-          data-id="3"
-          data-order="year"
-          >
-          <p class="error-messege"  data-order="3"></p>
-        </div>
-
-     
-           <!-- <input type="submit" class="submit"> -->
-            <button type="submit" class="submit">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="27" viewBox="0 0 46 44">
-              <g fill="none" stroke="#FFF" stroke-width="2">
-                <path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44" />
-              </g>
-            </svg>
-           </button>
-      </fieldset>
-
-      <div class="show--age">
-        <h1><span class="text-year">--</span>years</h1>
-        <h1><span class="text-month">--</span>months</h1>
-        <h1><span class="text-day">--</span>days</h1>
-      </div>
-    </form>
-  </section>
-
-
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">zahra</a>.
-  </div> -->
-</body>
-
+				<div class="show--age">
+					<h1><span class="text-year">--</span>years</h1>
+					<h1><span class="text-month">--</span>months</h1>
+					<h1><span class="text-day">--</span>days</h1>
+				</div>
+			</form>
+		</section>
+		<script type="module" src="/src/assets/main.ts"></script>
+	</body>
 </html>
