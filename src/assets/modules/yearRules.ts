@@ -19,7 +19,7 @@ export class YearRules implements GlobalRules{
     private isYearExist(){
          if(this.userYearBirthday>this.year||!this.yearRegex.test(this.userYearBirthday.toString())){
             this.userYearBirthday=Number.NaN;
-            this.yearErrorEl.textContent="Enter a valid year"
+            this.yearErrorEl.textContent="Enter a valid date"
         }
     }
 
